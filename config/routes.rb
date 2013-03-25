@@ -1,4 +1,17 @@
 Tweetcritic::Application.routes.draw do
+
+  get "search/index"
+
+  root to: 'static_pages#home'
+
+  get "static_pages/home"
+
+  get "static_pages/about"
+
+  match '/search', to: 'search#index'
+
+  match '/about', to: 'static_pages#about'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

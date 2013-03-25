@@ -7,6 +7,10 @@
 # Ignore bundler config
 /.bundle
 
+# Ignore initializers which include secret keys.
+/config/initializers/twitter_initializer.rb
+/config/initializers/secret_token.rb
+
 # Ignore the default SQLite database.
 /db/*.sqlite3
 

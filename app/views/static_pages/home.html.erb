@@ -1,0 +1,8 @@
+<h1>Welcome to 140critic!</h1>
+<p>See what people are saying about a movie!</p>
+<%= form_tag("/search", :method => "get", :required => true) do %>
+ <!-- <%= label_tag(:q, "Search") %> -->
+  <%= text_field_tag(:search, params[:search]) %>
+  <%= submit_tag("Search", :name => nil) %>
+<% end %>
+
