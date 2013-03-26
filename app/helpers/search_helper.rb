@@ -1,7 +1,9 @@
 module SearchHelper
 	def tweetsearch(params)
-		Twitter.search(params[:search], :result_type => "recent").results.map do |status|
-  		"#{status.from_user}: #{status.text}"
-  		end
+	  if params[:search].include? 'movie'
+		    @tweets = Twitter.search( '"' + params[:search] + '"', :count => 15)
+  	  else
+  	  	 @tweets = Twitter.search('"' + params[:search] + '"' + 'movie', :count => 15)
+  	  end
   	end
 end

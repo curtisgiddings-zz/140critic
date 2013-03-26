@@ -13,8 +13,8 @@ describe "StaticPages" do
       describe "with valid query" do
         it "should go to the results page" do
           visit '/static_pages/home'
-          fill_in('Search', :with => 'Spring Breakers')
-          find_button('Search').click
+          fill_in('search', :with => 'Spring Breakers')
+          find_button('search').click
           page.shoud have_content('Spring Breakers')
         end
       end
