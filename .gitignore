@@ -10,6 +10,7 @@
 # Ignore initializers which include secret keys.
 /config/initializers/twitter_initializer.rb
 /config/initializers/secret_token.rb
+/config/initializers/tmdb_initializer.rb
 
 # Ignore the default SQLite database.
 /db/*.sqlite3

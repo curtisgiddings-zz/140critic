@@ -1,4 +1,19 @@
 <h1>You searched for "<%=params[:search].capitalize%>"</h1>
+<h2> Cast </h2>
+<ol>
+ <%@cast["cast"].each do |cast|%>
+ 	<%= cast["name"] %>
+ 	<br>
+<%end%>
+ </ol>
+
+ <h2> Posters </h2>
+ <%@images["posters"].each do |poster|%>
+ 	<%=image_tag "http://d3gtl9l2a4fn1j.cloudfront.net/t/p/" + "w185" + poster["file_path"] %>
+ <%end%>
+
+
+<h2> What does Twitter think? </h2>
 <ol class= "tweets">
 <% tweetsearch(params).results.map do |tweet| %>
 	<%= "#{tweet.from_user}: #{tweet.text}" %>
