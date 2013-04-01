@@ -19,6 +19,11 @@
               <li><%= link_to "Home",    :root %></li>
               <li><%= link_to "About",    '/about' %></li>
             </ul>
+            <%= form_tag("/search", :method => "get", :required => 
+                true, :class => 'search') do %>
+            <%= text_field_tag(:search, params[:search]) %>
+            <%= submit_tag("Search", :class=> "btn btn-small") %>
+            <% end %>
           </nav>
         </div>
       </div>

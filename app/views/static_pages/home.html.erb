@@ -1,8 +1,11 @@
-<h1>Welcome to 140critic!</h1>
+<h1>Search for a Movie!</h1>
 <div class="center">
-<p>See what people are saying about a movie!</p>
-<%= form_tag("/search", :method => "get", :required => true) do %>
-  <%= text_field_tag(:search, params[:search]) %>
-  <%= submit_tag("Search", :name => nil) %>
+<p>See what people on Twitter are saying about your favorite movies.</p>
+<%= form_tag("/search", :method => "get", 
+						:required => true) do %>
+  <%= text_field_tag(:search, params[:search], :class => "span6 xxlarge") %>
+  <%= submit_tag("Search", 
+  						   :class => "btn btn-large btn-primary") %>
 <% end %>
+  <%= image_tag("twitter_bird.png") %>
 </div>

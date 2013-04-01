@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
 gem 'bootstrap-sass', '2.1'
+gem 'bootswatch-rails'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'
